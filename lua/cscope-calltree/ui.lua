@@ -17,6 +17,9 @@ end
 
 function M.init(fun)
   local root_symbol = vim.fn.expand("<cword>")
+  local root_filename = vim.api.nvim_buf_get_name(0)
+  local root_lnum = vim.api.nvim_win_get_cursor(0)[1]
+  local root_code = vim.api.nvim_get_current_line()
   local origin_window = vim.api.nvim_get_current_win()
   -- TODO: Make these parameters configurable
   local split = NuiSplit({
@@ -31,9 +34,9 @@ function M.init(fun)
     nodes = {
       NuiTree.Node({
         text = root_symbol,
-        filename = vim.api.nvim_buf_get_name(0),
-        lnum = vim.api.nvim_win_get_cursor(0)[1],
-        code = vim.api.nvim_get_current_line(),
+        filename = root_filename,
+        lnum = root_lnum,
+        code = root_code,
       }),
     },
   })
