@@ -24,4 +24,8 @@ M.caller_tree = function()
   return module.init_caller_tree()
 end
 
+M.callee_tree = function()
+  return module.init_callee_tree()
+end
+
 return M
