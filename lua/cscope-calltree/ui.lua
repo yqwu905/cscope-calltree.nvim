@@ -26,6 +26,9 @@ function M.init(fun)
     relative = "editor",
     position = "bottom",
     size = "40%",
+    buf_options = {
+      filetype = "cscope_calltree",
+    },
   })
   split:mount()
 
