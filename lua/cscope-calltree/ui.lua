@@ -100,6 +100,10 @@ function M.init(fun)
       vim.api.nvim_command("normal!" .. node.lnum .. "G")
     end
   end)
+
+  split:map("n", "q", function()
+    split:unmount()
+  end)
 end
 
 return M

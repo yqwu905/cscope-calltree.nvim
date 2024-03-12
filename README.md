@@ -28,6 +28,7 @@ contain a call hierarchy tree with following mapping:
 | l   | Expand node or get caller/callee of current symbol |
 | h   | Collapse node                                      |
 | K   | Show basic information of this node                |
+| q   | Close split window                                 |
 
 ## Configuration
 
